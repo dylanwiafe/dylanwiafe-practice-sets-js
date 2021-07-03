@@ -79,7 +79,9 @@ joinAllElem();
 
 // function insertDashesIntoArray(numArray) {
 //   let addDashes =
+//   if (num % 2 === 0){
 
+//   }
 //     numArray[0] +
 //     "-" +
 //     numArray[1] +
@@ -93,7 +95,39 @@ joinAllElem();
 // }
 
 // console.log(insertDashesIntoArray([0, 2, 5, 4, 6, 8]));
-// 7. Write a JavaScript program to sort the items of an array.
+
+function insertDashesIntoArray(numArray) {
+  let newArr = [];
+  for (let i = 0; i < numArray.length; i++) {
+    // Check if value is even
+    if (isEven(numArray[i])) {
+      // Check if the value preceeding the current iteration is also even
+      // if true, concatenate the "-" to the current item and push to the new array
+      // if false, simply push value to the new array
+      if (i !== 0 && isEven(numArray[i - 1])) {
+        newArr.push("-" + numArray[i]);
+      } else {
+        newArr.push(numArray[i]);
+      }
+    } else {
+      newArr.push(numArray[i]);
+    }
+  }
+
+  // helper function isEven
+  function isEven(num) {
+    if (num % 2 === 0) {
+      return true;
+    }
+    return false;
+  }
+
+  console.log(newArr.join(""));
+}
+
+insertDashesIntoArray([1, 2, 5, 4, 6, 8, 7, 5, 2, 3, 4, 5, 7, 9]); // "1254-6-875234579"
+
+// 7. Write a JavaScript program to sort the items of an array. Go to the editor
 // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
