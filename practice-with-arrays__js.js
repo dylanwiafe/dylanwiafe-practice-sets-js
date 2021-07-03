@@ -19,7 +19,7 @@ function cloneArray(arr) {
 
 cloneArray(["elephant", "camel"]);
 
-// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
 // Test Data :
 // console.log(first([7, 9, 0, -2]));
 // console.log(first([],3));
@@ -40,7 +40,7 @@ function getFirstElem(arr) {
 
 getFirstElem([7, 9, 0, -2]);
 
-// 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
+// 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
 // Test Data :
 // console.log(last([7, 9, 0, -2]));
 // console.log(last([7, 9, 0, -2],3));
@@ -56,7 +56,7 @@ function removeLastElem(arr) {
 
 removeLastElem([7, 9, 0, -2]);
 
-// 5. Write a simple JavaScript program to join all elements of the following array into a string. Go to the editor
+// 5. Write a simple JavaScript program to join all elements of the following array into a string.
 // Sample array : myColor = ["Red", "Green", "White", "Black"];
 // Expected Output :
 // "Red,Green,White,Black"
@@ -77,25 +77,23 @@ joinAllElem();
 // 6. Write a JavaScript program which accept a number as input and insert dashes
 // (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
 
-function insertDashesIntoArray(numArray) {
-  let addDashes =
-  if (num % 2 === 0){
-      
-  }
-    numArray[0] +
-    "-" +
-    numArray[1] +
-    numArray[2] +
-    numArray[3] +
-    "-" +
-    numArray[4] +
-    "-" +
-    numArray[5];
-  return addDashes;
-}
+// function insertDashesIntoArray(numArray) {
+//   let addDashes =
 
-console.log(insertDashesIntoArray([0, 2, 5, 4, 6, 8]));
-// 7. Write a JavaScript program to sort the items of an array. Go to the editor
+//     numArray[0] +
+//     "-" +
+//     numArray[1] +
+//     numArray[2] +
+//     numArray[3] +
+//     "-" +
+//     numArray[4] +
+//     "-" +
+//     numArray[5];
+//   return addDashes;
+// }
+
+// console.log(insertDashesIntoArray([0, 2, 5, 4, 6, 8]));
+// 7. Write a JavaScript program to sort the items of an array.
 // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 // Click me to see the solution
@@ -107,7 +105,7 @@ function sortMyArray(numArray) {
 }
 
 sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
-// 8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
+// 8. Write a JavaScript program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
 // Click me to see the solution
@@ -117,10 +115,23 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 
 // }
 
-// 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
+// 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 // Click me to see the solution
+function invertCase(str) {
+  if (str === str.toLowerCase()) {
+    str.toUpperCase();
+    // console.log(invertCase(str));
+  } else {
+    str.toLowerCase();
+    // console.log(invertCase(str));
+  }
+  return str;
+  // console.log(invertCase(str));
+}
 
-// 10. Write a JavaScript program which prints the elements of the following array. Go to the editor
+console.log(invertCase("The Quick Brown Fox"));
+
+// 10. Write a JavaScript program which prints the elements of the following array.
 // Note : Use nested for loops.
 // Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
 // Sample Output :
@@ -130,3 +141,53 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 // " 1"
 // " 24"
 // "row 1"
+
+function sliceArray(arr) {
+  let firstArray = arr[0];
+  let firstElem = firstArray.slice();
+  for (i = 0; i < arr.length; i++) {
+    console.log(arr.slice());
+  }
+  console.log(firstElem);
+  console.log(arr[0]);
+  console.log(arr[0].slice());
+  console.log(arr[0].slice());
+  console.log(arr[0].slice());
+}
+
+sliceArray([
+  [1, 2, 1, 24],
+  [8, 11, 9, 4],
+  [7, 0, 7, 27],
+  [7, 4, 28, 14],
+  [3, 10, 26, 7],
+]);
+
+// 11. Write a JavaScript program to find the sum of squares of a numeric vector.
+
+// 12. Write a JavaScript program to compute the sum and product of an array of integers.
+
+function sumAndProduct(arr) {
+  for (i = 0; i < arr.length; i + arr[i - 1]) {
+    let runningTotal = arr[i] + 0;
+    console.log(runningTotal);
+  }
+}
+
+sumAndProduct([1, 2, 3]);
+
+// 13. Write a JavaScript program to add items in an blank array and display the items.
+// Sample Screen :
+// add elements in an blank array
+
+// 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+// 15. We have the following arrays :
+// color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// o = ["th","st","nd","rd"]
+// Write a JavaScript program to display the colors in the following way :
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+// - - - - - - - - - - - - -
+// Note : Use ordinal numbers to tell their position.
