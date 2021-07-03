@@ -197,21 +197,43 @@ sliceArray([
 ]);
 
 // 11. Write a JavaScript program to find the sum of squares of a numeric vector.
+function findArea() {
+  let side1 = 0;
+  let side2 = 0;
+  let side3 = 0;
+  let side4 = 0;
+  let area = side1 + side2 + side3 + side4;
+  console.log(area);
+}
+
+findArea();
 
 // 12. Write a JavaScript program to compute the sum and product of an array of integers.
 
 function sumAndProduct(arr) {
-  for (i = 0; i < arr.length; i + arr[i - 1]) {
-    let runningTotal = arr[i] + 0;
-    console.log(runningTotal);
+  let array = [1, 2, 3, 4, 5];
+  const sum = array.reduce((total, amount) => total + amount);
+  let output = 1;
+  for (let i = 0; i < array.length; i++) {
+    output *= array[i];
+    console.log(output);
   }
+  console.log(sum);
 }
 
-sumAndProduct([1, 2, 3]);
+sumAndProduct();
 
 // 13. Write a JavaScript program to add items in an blank array and display the items.
 // Sample Screen :
 // add elements in an blank array
+
+function addItemsInBlankArray() {
+  array1 = ["item1", "item2", "item3"];
+  array2 = [];
+  array3 = array1.concat(array2);
+
+  console.log(array3);
+}
 
 // 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
