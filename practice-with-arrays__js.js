@@ -74,6 +74,8 @@ joinAllElem();
 
 //Practice set 07/01/2021
 
+// Windowing ->
+
 // 6. Write a JavaScript program which accept a number as input and insert dashes
 // (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
 
@@ -127,7 +129,7 @@ function insertDashesIntoArray(numArray) {
 
 insertDashesIntoArray([1, 2, 5, 4, 6, 8, 7, 5, 2, 3, 4, 5, 7, 9]); // "1254-6-875234579"
 
-// 7. Write a JavaScript program to sort the items of an array. Go to the editor
+// 7. Write a JavaScript program to sort the items of an array.
 // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
@@ -141,7 +143,7 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 // 8. Write a JavaScript program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
-// Click me to see the solution
+//
 
 // https://javascript.plainenglish.io/how-to-find-the-most-frequent-element-in-an-array-in-javascript-c85119dc78d2
 // function findPseudoMode(arr) {
@@ -149,7 +151,7 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 // }
 
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
-// Click me to see the solution
+//
 function invertCase(str) {
   if (str === str.toLowerCase()) {
     str.toUpperCase();
@@ -197,14 +199,7 @@ sliceArray([
 ]);
 
 // 11. Write a JavaScript program to find the sum of squares of a numeric vector.
-function findArea() {
-  let side1 = 0;
-  let side2 = 0;
-  let side3 = 0;
-  let side4 = 0;
-  let area = side1 + side2 + side3 + side4;
-  console.log(area);
-}
+function findArea() {}
 
 findArea();
 
@@ -228,9 +223,9 @@ sumAndProduct();
 // add elements in an blank array
 
 function addItemsInBlankArray() {
-  array1 = ["item1", "item2", "item3"];
-  array2 = [];
-  array3 = array1.concat(array2);
+  let array1 = ["item1", "item2", "item3"];
+  let array2 = [];
+  let array3 = array1.concat(array2);
 
   console.log(array3);
 }
@@ -246,3 +241,38 @@ function addItemsInBlankArray() {
 // "3rd choice is Red."
 // - - - - - - - - - - - - -
 // Note : Use ordinal numbers to tell their position.
+
+// 16. Find the leap years in a given range of years.
+//leap years occur every four years
+//e.g. when is the leap year [365,365,365,366]
+
+// 17. Write a JavaScript program to shuffle an array.
+//
+
+// 18. Write a JavaScript program to perform a binary search.
+// Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
+// Sample array :
+// var items = [1, 2, 3, 4, 5, 7, 8, 9];
+// Expected Output :
+// console.log(binary_Search(items, 1)); //0
+// console.log(binary_Search(items, 5)); //4
+//
+
+// 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
+// Sample array :
+// array1 = [1,0,2,3,4];
+// array2 = [3,5,6,7,8,13];
+// Expected Output :
+function addEmUp() {
+  array1 = [1, 0, 2, 3, 4];
+  array2 = [3, 5, 6, 7, 8, 13];
+  array1.map((numbers) => {
+    let sum = numbers + array2;
+    console.log(sum);
+  });
+}
+// [4, 5, 8, 10, 12, 13]
+//
+
+// 20. Write a JavaScript program to find duplicate values in a JavaScript array.
+//
