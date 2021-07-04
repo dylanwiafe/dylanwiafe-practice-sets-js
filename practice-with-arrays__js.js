@@ -148,6 +148,38 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 
 // }
 
+// Write a JavaScript program to find the most frequent item of an array.
+// Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+function mode(arr){
+  
+  //Define a js object to store key value pairs
+  modeObj = {};
+  max = arr[0];
+  maxCount = 1;
+  for(let i = 0; i < arr.length; i++){
+    let item = arr[i]
+    if(!modeObj.hasOwnProperty(arr[i])){
+      modeObj[item] = 1;
+    }else{
+      modeObj[item]++;
+    }
+    
+    if(modeObj[item] > maxCount){
+      max = item;
+      maxCount = modeObj[item];
+    }
+  }
+  
+  console.log(max);
+  console.log(maxCount);
+  return max
+}
+
+mode([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+
+
+
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 // Click me to see the solution
 function invertCase(str) {
