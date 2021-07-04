@@ -153,18 +153,36 @@ sortMyArray([-4, -3, 1, 2, 3, 5, 6, 7, 8]);
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 //
 function invertCase(str) {
+  str.split(" ");
   if (str === str.toLowerCase()) {
     str.toUpperCase();
-    // console.log(invertCase(str));
   } else {
     str.toLowerCase();
-    // console.log(invertCase(str));
   }
   return str;
-  // console.log(invertCase(str));
 }
 
 console.log(invertCase("The Quick Brown Fox"));
+
+function invertCase(str) {
+  // string.split() function returns an array of strings.
+  let splitString = str.split("");
+  let newStr = "";
+
+  for (let i = 0; i < splitString.length; i++) {
+    if (splitString[i] === " ") {
+      newStr += splitString[i];
+    } else if (splitString[i] === splitString[i].toLowerCase()) {
+      newStr += splitString[i].toUpperCase();
+    } else {
+      newStr += splitString[i].toLowerCase();
+    }
+  }
+  console.log(newStr);
+  // return splitString;
+}
+
+invertCase("The Quick Brown Fox");
 
 // 10. Write a JavaScript program which prints the elements of the following array.
 // Note : Use nested for loops.
